@@ -12,8 +12,8 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
   if (!product) return null;
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(`Olá! Tenho interesse no produto: ${product.nome} (ID: ${product.id})`);
-    const phoneNumber = "5511999999999"; // Replace with your WhatsApp number
+    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre a joia "${product.nome}". Ainda está disponível?`);
+    const phoneNumber = "555192355053"; // Replace with your WhatsApp number
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
