@@ -1,50 +1,41 @@
-// netlify/functions/updateItems.js
-let itens = [
-  {
-    "id": 1,
-    "nome": "Brinco Búzios",
-    "categoria": "brincos",
-    "preco": 24.90,
-    "estoque": true,
-    "imagem": "/images/brinco_buzios.jpeg",
-    "descricao": "Brinco de pino, dourado, com uma concha natural (búzio)...",
-    "materiais": "Banhado a verniz e resina",
-    "tamanho": "5cm de altura"
-  },
-  // ... coloque aqui os outros itens do seu JSON
-];
+const fs = require("fs");
+const path = require("path");
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: "Use POST apenas",
+    };
+  }
+
   try {
-    const data = JSON.parse(event.body);
+    const novoItem = JSON.parse(event.body);
 
-    if (!data.id) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ message: "É necessário informar o ID do item." }),
-      };
-    }
+    const filePath = path.join(__dirname, "../../items.json");
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
     // Verifica se o item já existe
-    const index = itens.findIndex(item => item.id === data.id);
+    const index = data.findIndex((item) => item.id === novoItem.id);
 
-    if (index !== -1) {
-      // Atualiza item existente
-      itens[index] = { ...itens[index], ...data };
+    if (index >= 0) {
+      // Atualizar item existente
+      data[index] = novoItem;
     } else {
-      // Adiciona novo item
-      itens.push(data);
+      // Adicionar novo item
+      data.push(novoItem);
     }
+
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Item atualizado com sucesso!", itens }),
+      body: JSON.stringify({ message: "Item atualizado com sucesso!" }),
     };
-  } catch (error) {
+  } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Erro ao processar dados", error: error.message }),
+      body: "Erro: " + err.message,
     };
   }
 };
-
