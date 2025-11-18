@@ -5,17 +5,19 @@ exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
-      body: "Use POST apenas",
+      body: "Use apenas POST.",
     };
   }
 
   try {
     const novoItem = JSON.parse(event.body);
 
-    const filePath = path.join(__dirname, "../../items.json");
+    // Caminho correto para /public/items.json
+    const filePath = path.join(__dirname, "../../public/items.json");
+
     const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-    // Verifica se o item já existe
+    // Procurar se o item já existe
     const index = data.findIndex((item) => item.id === novoItem.id);
 
     if (index >= 0) {
@@ -30,8 +32,9 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Item atualizado com sucesso!" }),
+      body: JSON.stringify({ message: "Item atualizado/adicionado com sucesso!" }),
     };
+
   } catch (err) {
     return {
       statusCode: 500,
