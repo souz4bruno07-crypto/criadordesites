@@ -27,7 +27,7 @@
     "nome": "Colar coração",
     "categoria": "colares",
     "preco": 49.90,
-    "estoque": false,
+    "estoque": true,
     "imagem": "/images/colar_coracao.jpeg",
     "descricao": "CColar delicado com fio de nylon (invisível), que dá a impressão de que o pingente está flutuando na pele. Possui um pingente de coração em madrepérola branca. É uma semijoia discreta e charmosa.",
     "materiais": "Semi Joia",
