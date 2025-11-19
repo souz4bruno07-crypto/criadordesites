@@ -1,0 +1,69 @@
+
+[
+  {
+    "id": 1,
+    "nome": "Brinco Búzios",
+    "categoria": "brincos",
+    "preco": 24.90,
+    "estoque": true,
+    "imagem": "/images/brinco_buzios.jpeg",
+    "descricao": "Brinco de pino, dourado, com uma concha natural (búzio) de cor clara no centro. A peça dourada tem um acabamento texturizado e traz um toque de praia e verão para o seu visual.",
+    "materiais": "Banhado a verniz e resina",
+    "tamanho": "5cm de altura"
+  },
+  {
+    "id": 2,
+    "nome": "Brinco Flor",
+    "categoria": "brincos",
+    "preco": 29.90,
+    "estoque": true,
+    "imagem": "/images/brinco_flor.jpeg",
+    "descricao": "Brinco de pino grande e dourado, com o formato de uma flor exótica ou pétala. Possui um acabamento plissado e brilhante que cria um efeito de luz e sombra, sendo ideal para quem busca um acessório elegante e de destaque.",
+    "materiais": "Banhado a verniz italiano",
+    "tamanho": "10cm"
+  },
+  {
+    "id": 3,
+    "nome": "Colar coração",
+    "categoria": "colares",
+    "preco": 49.90,
+    "estoque": true,
+    "imagem": "/images/colar_coracao.jpeg",
+    "descricao": "CColar delicado com fio de nylon (invisível), que dá a impressão de que o pingente está flutuando na pele. Possui um pingente de coração em madrepérola branca. É uma semijoia discreta e charmosa.",
+    "materiais": "Semi Joia",
+    "tamanho": "45cm de nylon"
+  },
+  {
+    "id": 4,
+    "nome": "Gargantilha Masculina",
+    "categoria": "colares",
+    "preco": 199.90,
+    "estoque": true,
+    "imagem": "/images/gargantilha_masculina.jpeg",
+    "descricao": "Este é um colar (corrente) masculino dourado de 70cm. A corrente possui o elo tipo figaro (com elos longos e curtos alternados) e vem com um pingente de cruz texturizada. É uma peça clássica e de presença.",
+    "materiais": "Semi Joia",
+    "tamanho": "70cm"
+  },
+  {
+    "id": 5,
+    "nome": "Conjunto sardinha",
+    "categoria": "kits",
+    "preco": 69.90,
+    "estoque": true,
+    "imagem": "/images/kit_sardinha.jpeg",
+    "descricao": "Este é um conjunto de colar e brincos dourados com um design criativo de esqueletos de peixe. As peças são vazadas e têm uma pequena pedra preta no olho, dando um toque moderno. O colar tem um aro grande e os brincos são pendurados.",
+    "materiais": "Banho de verniz italiano",
+    "tamanho": "20cm colar, 7cm brinco"
+  },
+  {
+    "id": 6,
+    "nome": "Conjunto coração",
+    "categoria": "kits",
+    "preco": 49.90,
+    "estoque": true,
+    "imagem": "/images/kit_coracao.jpeg",
+    "descricao": "Este é um conjunto de colar e brincos em metal dourado, ambos com o formato clássico de coração liso e polido. O colar possui um aro rígido e um pingente de coração grande. Os brincos são pequenos e no estilo stud (pino), também em formato de coração. É uma combinação simples, romântica e brilhante.",
+    "materiais": "Banhado",
+    "tamanho": "5 cm brinco, 10 cm colar"
+  }
+]
